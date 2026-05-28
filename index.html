@@ -579,6 +579,18 @@
 
   .gift-link-box a:hover { text-decoration: none; }
 
+  .gift-img-anim {
+    animation: giftFloat 2.6s ease-in-out infinite;
+    transform-origin: center bottom;
+  }
+
+  @keyframes giftFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-7px) rotate(-2deg); }
+    50% { transform: translateY(-10px) rotate(0deg); }
+    75% { transform: translateY(-5px) rotate(2deg); }
+  }
+
   .letter-sign {
     font-family: 'Playfair Display', cursive;
     font-size: 1.18rem;
@@ -639,7 +651,7 @@
 
     <!-- IN: ael asks -->
     <div class="msg-row in" id="m2">
-      <div class="msg-avatar hidden">
+      <div class="msg-avatar">
         <img src="img/ava.png" alt="ael" onerror="this.parentElement.innerHTML='🌸'">
       </div>
       <div class="bubble-wrap">
@@ -717,7 +729,7 @@
     <div class="gift-link-box">
       <div class="gift-link-label">a lil gift from me:</div>
       <a href="https://drive.google.com/drive/folders/1s4mjdQ0Pn5RBMfylaoRDSRqIG486G_v3?usp=sharing" target="_blank" id="giftLink">
-        <img src="img/gift.png" alt="gift" style="width:100%;display:block;border:none;outline:none;">
+        <img src="img/gift.png" alt="gift" class="gift-img-anim" style="width:100%;display:block;border:none;outline:none;">
       </a>
     </div>
 
@@ -741,7 +753,7 @@
   // === SEQUENTIAL CHAT ANIMATION ===
   function startChatAnimation() {
     const msgs = ['m1','m2','m3','m4','m5'];
-    const delays = [200, 1000, 2000, 3200, 4200]; // ms after loading ends
+    const delays = [200, 1800, 3600, 5400, 7200]; // ms after loading ends
     msgs.forEach((id, i) => {
       setTimeout(() => {
         const el = document.getElementById(id);
