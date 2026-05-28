@@ -520,7 +520,7 @@
 
   .letter-title {
     font-family: 'Playfair Display', cursive;
-    font-size: 1.55rem;
+    font-size: 1rem;
     color: #d64f7e;
     text-align: center;
     font-weight: 700;
@@ -580,20 +580,17 @@
   .gift-link-box a:hover { text-decoration: none; }
 
   .gift-img-anim {
-    animation: giftFloat 2.6s ease-in-out infinite;
-    transform-origin: center bottom;
+    animation: giftPulse 2.8s ease-in-out infinite;
   }
-
-  @keyframes giftFloat {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    25% { transform: translateY(-7px) rotate(-2deg); }
-    50% { transform: translateY(-10px) rotate(0deg); }
-    75% { transform: translateY(-5px) rotate(2deg); }
+  
+  @keyframes giftPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.06); }
   }
 
   .letter-sign {
     font-family: 'Playfair Display', cursive;
-    font-size: 1.18rem;
+    font-size: 0.8rem;
     color: #d64f7e;
     text-align: right;
     margin-top: 18px;
