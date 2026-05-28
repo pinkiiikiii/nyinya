@@ -377,7 +377,7 @@
   .chat-input-bar {
     background: linear-gradient(0deg, var(--pink-light) 0%, rgba(255,227,239,0.75) 100%);
     border-top: 1.5px solid rgba(254,141,171,0.4);
-    padding: 10px 14px;
+    padding: 10px 14px calc(16px + env(safe-area-inset-bottom, 0px));
     display: flex;
     align-items: center;
     gap: 10px;
